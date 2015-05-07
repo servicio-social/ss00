@@ -42,6 +42,7 @@
 			<div class="content">
 				<div class="title">Servicio Social</div>
 				<div class="quote">{{ Inspiring::quote() }}</div>
+				<div class="quote">Ola k ase</div>
 			</div>
 		</div>
 	</body>

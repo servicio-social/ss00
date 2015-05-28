@@ -30,28 +30,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">Servicio Social</a>
+                <a class="navbar-brand topnav" >Servicio Social</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="{{ url('/') }}">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="acceso.html">Acceso</a>
-                    </li>
-                    <li>
-                        <a href="documentacion.html">Documentación</a>
-                    </li>
-                    <li>
-                        <a href="informacion.html">Información</a>
-                    </li>
-
+                    <li><a href="{{ url('/') }}">Inicio</a></li>
+                    <li><a href="{{ url('/informacion') }}">Información</a></li>
 					@if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}">Login</a></li>
 						<li><a href="{{ url('/auth/register') }}">Register</a></li>
 					@else
+						<li><a href="documentacion.html">Documentación</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
@@ -60,15 +50,13 @@
 						</li>
 					@endif
 				</ul>
-
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
 
-
 	@yield('content')
 
-<!-- Footer -->
+	<!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
@@ -85,5 +73,6 @@
 	<!-- Scripts -->
     <script src="{{ asset('/js/jquery.js') }}"></script>
     <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/js/events.js') }}"></script>
 </body>
 </html>

@@ -191,3 +191,10 @@ p.copyright {
    margin-right: auto;
    margin-left: auto;
 }
+
+.img-header {
+    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 300px;
+    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}

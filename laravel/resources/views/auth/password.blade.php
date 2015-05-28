@@ -1,9 +1,11 @@
-@extends('app')
+@extends('master')
 
 @section('content')
-<div class="container-fluid">
+<div class="content-section-b">
+<div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
+			<br><br>
 			<div class="panel panel-default">
 				<div class="panel-heading">Reset Password</div>
 				<div class="panel-body">
@@ -46,5 +48,6 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 @endsection

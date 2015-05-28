@@ -2,15 +2,15 @@
 *Version 0.2 - 27 de Mayo de 2015*
 
 ### EQUIPO
-ARMENTA ALEJANDRO
-BURGOS JARSON
-FELIX EDUARDO
-GAXIOLA CARLOS
-MONTOYA PABLO
-MELGAR CHRISTOPHER
-ORTIZ MANUEL
-QUEZADA IRWIN
-ZAÑUDO TOMAS
+- ARMENTA ALEJANDRO
+- BURGOS JARSON
+- FELIX EDUARDO
+- GAXIOLA CARLOS
+- MONTOYA PABLO
+- MELGAR CHRISTOPHER
+- ORTIZ MANUEL
+- QUEZADA IRWIN
+- ZAÑUDO TOMAS
 
 ### Prefacio
 Este es el documento de requisitos del proyecto de Automatización de Proceso de Servicio Social el cual tiene como propósito agilizar el proceso del servicio social mediante las entregas y revisiones a través de una página web.

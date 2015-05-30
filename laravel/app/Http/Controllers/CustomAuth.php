@@ -17,7 +17,7 @@ class CustomAuth extends Controller {
         if (Auth::attempt(['cn' => $cn, 'password' => $password], $remember))
         {
             //echo "success";
-            return redirect('/');
+            return redirect('documentacion');
         }
         else {
             return redirect('cauth/login');

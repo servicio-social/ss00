@@ -15,4 +15,8 @@ class IndexController extends Controller {
 	public function informacion(){
 		return view('informacion');
 	}
+
+	public function documentacion(){
+		return view('documentacion');
+	}
 }

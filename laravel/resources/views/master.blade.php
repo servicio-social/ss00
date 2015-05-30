@@ -38,8 +38,7 @@
                     <li><a href="{{ url('/') }}">Inicio</a></li>
                     <li><a href="{{ url('/informacion') }}">Información</a></li>
 					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
+						<li><a href="{{ url('/cauth/login') }}">Login</a></li>
 					@else
 						<li><a href="documentacion.html">Documentación</a></li>
 						<li class="dropdown">

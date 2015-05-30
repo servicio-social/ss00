@@ -7,32 +7,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-centered text-left">
-                        <br><br>
-                        <h1>DOCUMENTACIÓN</h1>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-xs-8">
-                                <div class="row">
-                                  <div class="col-xs-4">Matricula.-</div>
-                                  <div class="col-xs-4">{{ Auth::user()->cn }}</div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-xs-4">Nombre.-</div>
-                                  <div class="col-xs-4">{{ Auth::user()->cn }}</div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-xs-4">Carrera.-</div>
-                                  <div class="col-xs-4">{{ Auth::user()->cn }}</div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-xs-4">Plan.-</div>
-                                  <div class="col-xs-4">{{ Auth::user()->cn }}</div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-xs-4">Creditos.-</div>
-                                  <div class="col-xs-4">{{ Auth::user()->cn }}</div>
-                                </div>
+                    <br><br>
+                    <h1>DOCUMENTACIÓN</h1>
+                    @if (Auth::guest())
+
+                    @else
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-xs-8">
+                            <div class="row">
+                              <div class="col-xs-4">Matricula.-</div>
+                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-4">Nombre.-</div>
+                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-4">Carrera.-</div>
+                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-4">Plan.-</div>
+                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-4">Creditos.-</div>
+                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
                             </div>
                         </div>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div><!-- /.container -->
@@ -44,9 +48,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-centered">
-
-
-
+                    @if (Auth::guest())
+                        <h1> Necesitas estar logeado.
+                    @else
                     <div id="formatos">
                         <table class="table table-bordered">
                             <thead>
@@ -117,8 +121,7 @@
                             </tbody>
                         </table>
                     </div>
-
-
+                    @endif
                 </div>
             </div>
         </div><!-- /.container -->

@@ -64,17 +64,28 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">FILE 1 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
+                                    <td>                                         
+                                                {!! Form::open(array('url'=>'apply/upload','method'=>'POST', 'files'=>true)) !!}
+                                                <div class="control-group">
+                                                <div class="controls">
+                                                {!! Form::file('image') !!}
+                                            <p class="errors">{!!$errors->first('image')!!}</p>
+                                            @if(Session::has('error'))
+                                            <p class="errors">{!! Session::get('error') !!}</p>
+                                            @endif
+                                                </div>
+                                                </div>
+                                                <div id="success"> </div>
+                                            {!! Form::submit('Enviar', array('class'=>'send-btn')) !!}
+                                            {!! Form::close() !!}
                                             </ul>
-                                        </div>
                                     </td>
                                     <td>Ninguno</td>
-                                    <td><button type="button" class="btn btn-info btn-sm btn-block">No enviado</button></td>
+                                    @if(Session::has('success'))
+                                    <td><button type="button" class="btn btn-info btn-sm btn-block">Enviado</button></td>
+                                    @else
+                                    <td><button type="button" class="btn btn-info btn-sm btn-block">No Enviado</button></td>
+                                    @endif
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>

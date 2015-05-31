@@ -40,13 +40,18 @@
 					@if (Auth::guest())
 						<li><a href="{{ url('/cauth/login') }}">Login</a></li>
 					@else
+                    @if (Auth::user()->type==6)
+                        <li><a href="administracion">Administración</a></li>
+                    @endif
+                    @if (Auth::user()->type==1)
 						<li><a href="documentacion">Documentación</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->cn }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-							</ul>
-						</li>
+                    @endif
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->cn }} <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+                            </ul>
+                        </li>
 					@endif
 				</ul>
             </div><!-- /.navbar-collapse -->

@@ -26,19 +26,3 @@ Route::controllers([
 
 Route::get('cauth/login', 'CustomAuth@getLogin');
 Route::post('cauth/login', 'CustomAuth@postLogin');
-
-Route::get('create_user',function(){
-    $check = DB::table('users')
-                ->insert(array(
-                    'cn' => '10170926',
-                    'email' => 'eduardofelix@zn00.net',
-                    'password' => bcrypt('olakase'),
-                    'type' => '6'
-                ));
-    if($check) {
-        echo "success";
-    }
-    else {
-        echo "fail";
-    }
-});

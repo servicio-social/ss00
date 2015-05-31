@@ -56,17 +56,15 @@
                             <thead>
                                 <tr>
                                     <th>Formato</th>
-                                    <th>Archivo</th>
                                     <th>Comentarios</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">1</th>
                                     <td>
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">FILE 1 <span class="caret"></span></button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 1 <span class="caret"></span></button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Subir</a></li>
                                                 <li><a href="#">Reemplazar</a></li>
@@ -77,10 +75,9 @@
                                     <td><button type="button" class="btn btn-info btn-sm btn-block">No enviado</button></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
                                     <td>
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" disabled="disabled" data-toggle="dropdown" aria-expanded="false">FILE 2 <span class="caret"></span></button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" disabled="disabled" data-toggle="dropdown" aria-expanded="false">Numero 2 <span class="caret"></span></button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Subir</a></li>
                                                 <li><a href="#">Reemplazar</a></li>
@@ -91,10 +88,9 @@
                                     <td><button type="button" class="btn btn-primary btn-sm btn-block">Enviado</button></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">3</th>
                                     <td>
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">FILE 3 <span class="caret"></span></button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 3 <span class="caret"></span></button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Subir</a></li>
                                                 <li><a href="#">Reemplazar</a></li>
@@ -105,10 +101,9 @@
                                     <td><button type="button" class="btn btn-danger btn-sm btn-block">Rechazado</button></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">4</th>
                                     <td>
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">FILE 4 <span class="caret"></span></button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 4 <span class="caret"></span></button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Subir</a></li>
                                                 <li><a href="#">Reemplazar</a></li>

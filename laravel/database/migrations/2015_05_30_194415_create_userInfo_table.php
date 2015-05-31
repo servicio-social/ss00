@@ -21,7 +21,7 @@ class CreateUserInfoTable extends Migration {
 			$table->string('last_name');
 			$table->smallInteger('credits')->unsigned();
 			$table->string('career');
-			$table->smallInteger('plan')->unsigned();
+			$table->string('plan');
 			$table->timestamps();
 		});
 	}

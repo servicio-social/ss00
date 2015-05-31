@@ -13,26 +13,26 @@
 
                     @else
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-xs-8">
+                        <div class="col-lg-8 col-md-6 col-xs-12">
                             <div class="row">
-                              <div class="col-xs-4">Matricula.-</div>
-                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                              <div class="col-xs-3">Matricula.-</div>
+                              <div>{{ Auth::user()->cn }}</div>
                             </div>
                             <div class="row">
-                              <div class="col-xs-4">Nombre.-</div>
-                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                              <div class="col-xs-3">Nombre.-</div>
+                              <div>{{ $first_name }} {{ $last_name}}</div>
                             </div>
                             <div class="row">
-                              <div class="col-xs-4">Carrera.-</div>
-                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                              <div class="col-xs-3">Carrera.-</div>
+                              <div>{{ $career }}</div>
                             </div>
                             <div class="row">
-                              <div class="col-xs-4">Plan.-</div>
-                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                              <div class="col-xs-3">Plan.-</div>
+                              <div>{{ $plan }}</div>
                             </div>
                             <div class="row">
-                              <div class="col-xs-4">Creditos.-</div>
-                              <div class="col-xs-4">{{ Auth::user()->cn }}</div>
+                              <div class="col-xs-3">Creditos.-</div>
+                              <div>{{ $credits }}</div>
                             </div>
                         </div>
                     </div>

@@ -38,4 +38,16 @@ class IndexController extends Controller {
 
 		//return view('documentacion');
 	}
+
+	public function administracion(){
+		$cn = Auth::user()->cn;
+		$info=userInfo::where('cn', '=', $cn)->get();
+
+		foreach ($info as $userInfo){
+			$first_name = $userInfo->first_name;
+		    $last_name = $userInfo->last_name;
+		}
+
+		return view('administracion', compact('first_name', 'last_name'));
+	}
 }

@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-8 col-centered text-left">
                     <br><br>
-                    <h1>DOCUMENTACIÓN</h1>
+                    <h1>ADMINISTRACIÓN</h1>
                     @if (Auth::guest())
 
                     @else
@@ -21,18 +21,6 @@
                             <div class="row">
                               <div class="col-xs-3">Nombre.-</div>
                               <div>{{ $first_name }} {{ $last_name}}</div>
-                            </div>
-                            <div class="row">
-                              <div class="col-xs-3">Carrera.-</div>
-                              <div>{{ $career }}</div>
-                            </div>
-                            <div class="row">
-                              <div class="col-xs-3">Plan.-</div>
-                              <div>{{ $plan }}</div>
-                            </div>
-                            <div class="row">
-                              <div class="col-xs-3">Creditos.-</div>
-                              <div>{{ $credits }}</div>
                             </div>
                         </div>
                     </div>
@@ -49,8 +37,9 @@
             <div class="row">
                 <div class="col-lg-8 col-centered">
                     @if (Auth::guest())
-                        <h1> Necesitas estar logeado.
+                        <h1> Necesitas estar logeado.</h1>
                     @else
+                    @if (Auth::user()->type==6)
                     <div id="formatos">
                         <table class="table table-bordered">
                             <thead>
@@ -65,28 +54,14 @@
                                     <td>
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 1 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">                                       
-                                                {!! Form::open(array('url'=>'apply/upload','method'=>'POST', 'files'=>true)) !!}
-                                                <div class="control-group">
-                                                <div class="controls">
-                                                {!! Form::file('image') !!}
-                                            <p class="errors">{!!$errors->first('image')!!}</p>
-                                            @if(Session::has('error'))
-                                            <p class="errors">{!! Session::get('error') !!}</p>
-                                            @endif
-                                                </div>
-                                                </div>
-                                                <div id="success"> </div>
-                                            {!! Form::submit('Enviar', array('class'=>'send-btn')) !!}
-                                            {!! Form::close() !!}
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Subir</a></li>
+                                                <li><a href="#">Reemplazar</a></li>
                                             </ul>
+                                        </div>
                                     </td>
                                     <td>Ninguno</td>
-                                    @if(Session::has('success'))
-                                    <td><button type="button" class="btn btn-info btn-sm btn-block">Enviado</button></td>
-                                    @else
-                                    <td><button type="button" class="btn btn-info btn-sm btn-block">No Enviado</button></td>
-                                    @endif
+                                    <td><button type="button" class="btn btn-info btn-sm btn-block">No enviado</button></td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -130,6 +105,9 @@
                             </tbody>
                         </table>
                     </div>
+                    @else
+                    <h1>Solo para administradores.</h1>
+                    @endif
                     @endif
                 </div>
             </div>

@@ -18,6 +18,7 @@ Route::get('home', 'HomeController@index');
 Route::get('/', 'IndexController@index');
 Route::get('informacion', 'IndexController@informacion');
 Route::get('documentacion', 'IndexController@documentacion');
+Route::get('administracion', 'IndexController@administracion');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -26,5 +27,4 @@ Route::controllers([
 
 Route::get('cauth/login', 'CustomAuth@getLogin');
 Route::post('cauth/login', 'CustomAuth@postLogin');
-
 Route::post('apply/upload', 'ApplyController@upload');

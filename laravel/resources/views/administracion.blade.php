@@ -47,60 +47,53 @@
                                     <th>Formato</th>
                                     <th>Comentarios</th>
                                     <th>Status</th>
+                                    <th>Submit</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td><button type="button" class="btn btn-default btn-sm btn-block">Formato 1</button></td>
+                                    <td><textarea class="form-control" rows="3"></textarea></td>
                                     <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 1 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
-                                            </ul>
-                                        </div>
+                                        <select class="form-control">
+                                            <option>Rechazado</option>
+                                            <option>Aceptado</option>
+                                        </select>
                                     </td>
-                                    <td>Ninguno</td>
-                                    <td><button type="button" class="btn btn-info btn-sm btn-block">No enviado</button></td>
+                                    <td><button type="button" class="btn btn-info btn-sm btn-block">Enviar</button></td>
                                 </tr>
                                 <tr>
+                                    <td><button type="button" class="btn btn-default btn-sm btn-block">Formato 2</button></td>
+                                    <td><textarea class="form-control" rows="3"></textarea></td>
                                     <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" disabled="disabled" data-toggle="dropdown" aria-expanded="false">Numero 2 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
-                                            </ul>
-                                        </div>
+                                        <select class="form-control">
+                                            <option>Rechazado</option>
+                                            <option>Aceptado</option>
+                                        </select>
                                     </td>
-                                    <td>Archivo enviado</td>
-                                    <td><button type="button" class="btn btn-primary btn-sm btn-block">Enviado</button></td>
+                                    <td><button type="button" class="btn btn-info btn-sm btn-block">Enviar</button></td>
                                 </tr>
                                 <tr>
+                                    <td><button type="button" class="btn btn-default btn-sm btn-block">Formato 3</button></td>
+                                    <td><textarea class="form-control" rows="3"></textarea></td>
                                     <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 3 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
-                                            </ul>
-                                        </div>
+                                        <select class="form-control">
+                                            <option>Rechazado</option>
+                                            <option>Aceptado</option>
+                                        </select>
                                     </td>
-                                    <td>El único detalle es en el periodo: Enero-Junio 2015</td>
-                                    <td><button type="button" class="btn btn-danger btn-sm btn-block">Rechazado</button></td>
+                                    <td><button type="button" class="btn btn-info btn-sm btn-block">Enviar</button></td>
                                 </tr>
                                 <tr>
+                                    <td><button type="button" class="btn btn-default btn-sm btn-block">Formato 4</button></td>
+                                    <td><textarea class="form-control" rows="3"></textarea></td>
                                     <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 4 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
-                                            </ul>
-                                        </div>
+                                        <select class="form-control">
+                                            <option>Rechazado</option>
+                                            <option>Aceptado</option>
+                                        </select>
                                     </td>
-                                    <td>Formato aceptado</td>
-                                    <td><button type="button" class="btn btn-success btn-sm btn-block">Aceptado</button></td>
+                                    <td><button type="button" class="btn btn-info btn-sm btn-block">Enviar</button></td>
                                 </tr>
                             </tbody>
                         </table>

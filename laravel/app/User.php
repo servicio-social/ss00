@@ -36,4 +36,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasOne('userInfo');
     }
 
+	public function getCn()
+	{
+	  return $this->cn;
+	}
+
 }

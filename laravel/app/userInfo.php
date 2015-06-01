@@ -1,8 +1,8 @@
 <?php namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class userInfo extends Model {
+class UserInfo extends Eloquent {
 	protected $table = 'userInfo';
 	protected $fillable = ['cn', 'first_name', 'last_name', 'credits', 'career', 'plan'];
     

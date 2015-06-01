@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use Auth;
 use App\User;
-use App\userInfo;
+use App\UserInfo;
 
 class IndexController extends Controller {
 
@@ -21,7 +21,8 @@ class IndexController extends Controller {
 
 	public function documentacion(){
 		$cn = Auth::user()->cn;
-		$info=userInfo::where('cn', '=', $cn)->get();
+
+		$info=UserInfo::where('cn', '=', $cn)->get();
 
 		foreach ($info as $userInfo){
 			$first_name = $userInfo->first_name;
@@ -41,7 +42,7 @@ class IndexController extends Controller {
 
 	public function administracion(){
 		$cn = Auth::user()->cn;
-		$info=userInfo::where('cn', '=', $cn)->get();
+		$info=UserInfo::where('cn', '=', $cn)->get();
 
 		foreach ($info as $userInfo){
 			$first_name = $userInfo->first_name;

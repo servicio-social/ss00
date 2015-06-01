@@ -27,4 +27,3 @@ Route::controllers([
 
 Route::get('cauth/login', 'CustomAuth@getLogin');
 Route::post('cauth/login', 'CustomAuth@postLogin');
-Route::post('apply/upload', 'ApplyController@upload');

@@ -14,12 +14,14 @@ class CustomAuth extends Controller {
         $password = Request::input('password');
         $remember = Request::input('remember');
             
-        if (Auth::attempt(['cn' => $cn, 'password' => $password], $remember))
-        {
-            //echo "success";
-            return redirect('documentacion');
-        }
-        else {
+        if (Auth::attempt(['cn' => $cn, 'password' => $password], $remember)){
+            if (Auth::check()){
+                if (Auth::user()->type==6) {
+                    return redirect('administracion');
+                }
+                return redirect('documentacion');
+            }
+        }else {
             return redirect('cauth/login');
         }
     }

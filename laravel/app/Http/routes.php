@@ -27,3 +27,6 @@ Route::controllers([
 
 Route::get('cauth/login', 'CustomAuth@getLogin');
 Route::post('cauth/login', 'CustomAuth@postLogin');
+
+Route::get('documentacion/upload', 'IndexController@documentacion');
+Route::post('documentacion/upload', 'IndexController@documentacionUpload');

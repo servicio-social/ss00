@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\UserInfo;
+use App\Documento;
 
 class IndexController extends Controller {
 
@@ -32,12 +33,48 @@ class IndexController extends Controller {
 		    $credits = $userInfo->credits;
 		}
 
-		return view('documentacion', compact('first_name', 'last_name', 'career', 'plan', 'credits'));
+		$documentos=Documento::where('cn', '=', $cn)->get();
+		foreach ($documentos as $formatos){
+			$formato = $formatos->formato;
+		    $comentario = $formatos->comentario;
+		    $status = $formatos->status;
+		}
+
+		return view('documentacion', compact('first_name', 'last_name', 'career', 'plan', 'credits', 'formato'));
 
 	//$user = User::find(1);
     ///return view('documentacion')->with('user', $user);
 
 		//return view('documentacion');
+	}
+
+	public function documentacionUpload(){
+		$cn = Auth::user()->cn;
+
+		$nombre  = $_FILES["file"]["name"];
+		$archivo = $_FILES["file"]["tmp_name"]; 
+		$tamanio = $_FILES["file"]["size"];
+		$tipo    = $_FILES["file"]["type"];
+
+		if ( $archivo != "none" ){
+			$fp = fopen($archivo, "rb");
+			$contenido = fread($fp, $tamanio);
+			$contenido = addslashes($contenido);
+			fclose($fp); 
+
+			$documento = new Documento;
+			$documento->cn = $cn;
+			$documento->formato = '1';
+			$documento->comentario = 'Enviado';
+			$documento->status = '1';
+			$documento->nombre = $nombre;
+			$documento->archivo = $contenido;
+			$documento->tipo = $tipo;
+			$documento->save();
+
+			return redirect('documentacion');
+		}else
+			print "No se ha podido subir el archivo al servidor";
 	}
 
 	public function administracion(){

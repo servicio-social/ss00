@@ -6,7 +6,10 @@ class UserInfo extends Eloquent {
 	protected $table = 'userInfo';
 	protected $fillable = ['cn', 'first_name', 'last_name', 'credits', 'career', 'plan'];
     
-    public function user(){
+    public function User(){
         return $this->belongsTo('User');
+    }
+    public function Documento(){
+        return $this->hasMany('Documento');
     }
 }

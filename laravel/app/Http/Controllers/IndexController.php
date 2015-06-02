@@ -3,12 +3,13 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
+use Request;
 
 use Auth;
 use App\User;
 use App\UserInfo;
 use App\Documento;
+
 
 class IndexController extends Controller {
 
@@ -21,31 +22,25 @@ class IndexController extends Controller {
 	}
 
 	public function documentacion(){
-		$cn = Auth::user()->cn;
+		if (Auth::check()){
+			$cn = Auth::user()->cn;
 
-		$info=UserInfo::where('cn', '=', $cn)->get();
+			$info=UserInfo::where('cn', '=', $cn)->get();
 
-		foreach ($info as $userInfo){
-			$first_name = $userInfo->first_name;
-		    $last_name = $userInfo->last_name;
-		    $career = $userInfo->career;
-		    $plan = $userInfo->plan;
-		    $credits = $userInfo->credits;
+			foreach ($info as $userInfo){
+				$first_name = $userInfo->first_name;
+			    $last_name = $userInfo->last_name;
+			    $career = $userInfo->career;
+			    $plan = $userInfo->plan;
+			    $credits = $userInfo->credits;
+			}
+
+			$documentos=Documento::where('cn', '=', $cn)->get();
+
+			return view('documentacion', compact('first_name', 'last_name', 'career', 'plan', 'credits', 'documentos'));
 		}
 
-		$documentos=Documento::where('cn', '=', $cn)->get();
-		foreach ($documentos as $formatos){
-			$formato = $formatos->formato;
-		    $comentario = $formatos->comentario;
-		    $status = $formatos->status;
-		}
-
-		return view('documentacion', compact('first_name', 'last_name', 'career', 'plan', 'credits', 'formato'));
-
-	//$user = User::find(1);
-    ///return view('documentacion')->with('user', $user);
-
-		//return view('documentacion');
+		return view('documentacion');
 	}
 
 	public function documentacionUpload(){
@@ -56,6 +51,18 @@ class IndexController extends Controller {
 		$tamanio = $_FILES["file"]["size"];
 		$tipo    = $_FILES["file"]["type"];
 
+		$numeroDeFormato = Request::input('numeroDeFormato');
+
+		$subcadena = "."; 
+		$posicionsubcadena = strpos ($nombre, $subcadena);
+		$extencion = substr ($nombre, ($posicionsubcadena+1));
+
+		$nombre = $cn;
+		$nombre .= "_";
+		$nombre .= $numeroDeFormato;
+		$nombre .= ".";
+		$nombre .= $extencion;
+
 		if ( $archivo != "none" ){
 			$fp = fopen($archivo, "rb");
 			$contenido = fread($fp, $tamanio);
@@ -64,7 +71,7 @@ class IndexController extends Controller {
 
 			$documento = new Documento;
 			$documento->cn = $cn;
-			$documento->formato = '1';
+			$documento->formato = $numeroDeFormato;
 			$documento->comentario = 'Enviado';
 			$documento->status = '1';
 			$documento->nombre = $nombre;
@@ -78,14 +85,18 @@ class IndexController extends Controller {
 	}
 
 	public function administracion(){
-		$cn = Auth::user()->cn;
-		$info=UserInfo::where('cn', '=', $cn)->get();
+		if (Auth::check()){
+			$cn = Auth::user()->cn;
+			$info=UserInfo::where('cn', '=', $cn)->get();
 
-		foreach ($info as $userInfo){
-			$first_name = $userInfo->first_name;
-		    $last_name = $userInfo->last_name;
+			foreach ($info as $userInfo){
+				$first_name = $userInfo->first_name;
+			    $last_name = $userInfo->last_name;
+			}
+
+			return view('administracion', compact('first_name', 'last_name'));
 		}
 
-		return view('administracion', compact('first_name', 'last_name'));
+		return view('administracion');
 	}
 }

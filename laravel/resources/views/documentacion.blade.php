@@ -1,5 +1,7 @@
 @extends('master')
-
+@section('title')
+Documentación
+@stop
 
 @section('content')
     <!-- Header -->

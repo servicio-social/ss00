@@ -1,6 +1,7 @@
 @extends('master')
-
-
+@section('title')
+Información
+@stop
 @section('content')
     <!-- Header -->
     <div class="intro-header">

@@ -1,5 +1,8 @@
 @extends('master')
 
+@section('title')
+Servicio Social
+@stop
 
 @section('content')
 <!-- Header -->

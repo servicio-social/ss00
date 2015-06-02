@@ -1,5 +1,7 @@
 @extends('master')
-
+@section('title')
+Servicio Social - Login
+@stop
 @section('content')
 <div class="img-header">
 <div class="container">

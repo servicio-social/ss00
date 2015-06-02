@@ -89,18 +89,10 @@ class IndexController extends Controller {
 
 	public function administracion(){
 		if (Auth::check()){
-			$cn = Auth::user()->cn;
-			$info=UserInfo::where('cn', '=', $cn)->get();
-
-			foreach ($info as $userInfo){
-				$first_name = $userInfo->first_name;
-			    $last_name = $userInfo->last_name;
-			}
-
 			$usuarios=UserInfo::all();
 			$documentos=Documento::all();
 
-			return view('administracion', compact('first_name', 'last_name', 'usuarios', 'documentos'));
+			return view('administracion', compact('usuarios', 'documentos'));
 		}
 
 		return view('administracion');

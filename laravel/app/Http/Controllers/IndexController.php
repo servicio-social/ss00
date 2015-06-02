@@ -10,6 +10,8 @@ use App\User;
 use App\UserInfo;
 use App\Documento;
 
+use Session;
+
 
 class IndexController extends Controller {
 
@@ -63,7 +65,7 @@ class IndexController extends Controller {
 		$nombre .= ".";
 		$nombre .= $extencion;
 
-		if ( $archivo != "none" ){
+		if ( $archivo != NULL ){
 			$fp = fopen($archivo, "rb");
 			$contenido = fread($fp, $tamanio);
 			$contenido = addslashes($contenido);
@@ -81,7 +83,8 @@ class IndexController extends Controller {
 
 			return redirect('documentacion');
 		}else
-			print "No se ha podido subir el archivo al servidor";
+			Session::flash('error', 'El archivo es invalido');
+			return redirect('documentacion');
 	}
 
 	public function administracion(){
@@ -94,7 +97,10 @@ class IndexController extends Controller {
 			    $last_name = $userInfo->last_name;
 			}
 
-			return view('administracion', compact('first_name', 'last_name'));
+			$usuarios=UserInfo::all();
+			$documentos=Documento::all();
+
+			return view('administracion', compact('first_name', 'last_name', 'usuarios', 'documentos'));
 		}
 
 		return view('administracion');

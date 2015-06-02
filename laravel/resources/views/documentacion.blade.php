@@ -53,6 +53,13 @@ Documentación
                     @else
                     @if (Auth::user()->type==1)
                     <div id="formatos">
+                        @if(Session::has('error'))
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <strong>Error!</strong> {!! Session::get('error') !!}
+                            </div>
+                        @endif
+
                         <table class="table table-bordered">
                             <thead>
                                 <tr>

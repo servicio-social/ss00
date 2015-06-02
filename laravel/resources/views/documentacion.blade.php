@@ -55,63 +55,39 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Formato</th>
-                                    <th>Comentarios</th>
-                                    <th>Status</th>
+                                    <th class="col-lg-0">Formato</th>
+                                    <th class="col-lg-10">Comentarios</th>
+                                    <th class="col-lg-1">Status</th>
+                                    <th class="col-lg-1">Enviar</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 1 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
+                                    <form enctype="multipart/form-data" role="form" method="POST" name="FormFormato1" action="{{ url('/documentacion/upload') }}">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <td><span class="btn btn-default btn-sm btn-block btn-file">Numero 1<input type="file" name="file"></span></a></li></td>
                                     <td>Archivo no enviado</td>
                                     <td><button type="button" class="btn btn-info btn-sm btn-block">No enviado</button></td>
+                                    <td><button type="submit" class="btn btn-info btn-sm btn-block">Enviar</button></td>
+                                    </form>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" disabled="disabled" data-toggle="dropdown" aria-expanded="false">Numero 2 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
+                                    <td><span class="btn btn-default btn-sm btn-block btn-file" disabled="disabled">Numero 2<input type="file" name="file"></span></a></li></td>
                                     <td>Archivo enviado</td>
                                     <td><button type="button" class="btn btn-primary btn-sm btn-block">Enviado</button></td>
+                                    <td><button type="submit" class="btn btn-info btn-sm btn-block">Enviar</button></td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 3 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
+                                    <td><span class="btn btn-default btn-sm btn-block btn-file">Numero 3<input type="file" name="file"></span></a></li></td>
                                     <td>El único detalle es en el periodo: Enero-Junio 2015</td>
                                     <td><button type="button" class="btn btn-danger btn-sm btn-block">Rechazado</button></td>
+                                    <td><button type="submit" class="btn btn-info btn-sm btn-block">Enviar</button></td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Numero 4 <span class="caret"></span></button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Subir</a></li>
-                                                <li><a href="#">Reemplazar</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
+                                    <td><span class="btn btn-default btn-sm btn-block btn-file">Numero 4<input type="file" name="file"></span></a></li></td>
                                     <td>Formato aceptado</td>
                                     <td><button type="button" class="btn btn-success btn-sm btn-block">Aceptado</button></td>
+                                    <td><button type="submit" class="btn btn-info btn-sm btn-block">Enviar</button></td>
                                 </tr>
                             </tbody>
                         </table>

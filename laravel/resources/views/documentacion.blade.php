@@ -79,7 +79,7 @@ Documentación
                                     <td>
                                         @if (empty($documentos[$i-1])  && empty($documentos[$i-2]) && $i>1)
                                             <span class="btn btn-default btn-sm btn-block btn-file" disabled="disabled">Numero {{ $i }}<input type="file" name="file"></span>
-                                        @elseif (empty($documentos[$i-1])) 
+                                        @elseif (empty($documentos[$i-1]))
                                             <span class="btn btn-default btn-sm btn-block btn-file">Numero {{ $i }} <input type="file" name="file"></span>
                                         @else ($documentos[$i-1]->formato === $i)
                                             @if ($documentos[$i-1]->status === 2)

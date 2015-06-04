@@ -29,11 +29,11 @@ Información
 
                         <p>Es una actividad eminentemente formativa y de servicio, es decir, por un lado afirma y amplía la información académica del estudiante y, por otro, fomenta en él una conciencia de solidaridad con la sociedad a la que pertenece.</p>
 
-                        <p>El Servicio Social se presta con carácter temporal y obligatorio; además, es un requisito académico indispensable para la titulación.</p>                  
+                        <p>El Servicio Social se presta con carácter temporal y obligatorio; además, es un requisito académico indispensable para la titulación.</p>
                     </div>
                 </article>
                 <article id="art1">
-                    <div id="oculto">
+                    <div class="oculto">
                         <h3>¿Cuándo relizarlo?</h3>
                         <p>Para que inicies el servicio social es necesario que hayas cubierto, como mínimo, el 70 % de los créditos de tu carrera, los que obtienes al concluir en forma regular el sexto semestre.</p>
 
@@ -47,7 +47,7 @@ Información
                 </article>
 
                 <article id="art2">
-                    <div id="oculto">
+                    <div class="oculto">
                         <h3>¿Dónde puedes realizarlo?</h3>
                         <p>Los programas de Servicio Social internos y externos son las dos opciones donde puedes realizar tu Servicio Social.</p>
 
@@ -63,13 +63,13 @@ Información
 
                         <p>B. Programas Externos: Están diseñados y coordinados por personal de diversas instituciones públicas y del sector social.</p>
 
-                        <p>Su desarrollo atiende y da solución a problemáticas que por su naturaleza involucran la acción de los profesionales de la educación.</p>                 
+                        <p>Su desarrollo atiende y da solución a problemáticas que por su naturaleza involucran la acción de los profesionales de la educación.</p>
                     </div>
                     <button id="btnlm2" type="button" class="btn btn-default btn-lg btn-block">¿Dónde puedes realizarlo?</button>
                 </article>
 
                 <article id="art3">
-                    <div id="oculto">
+                    <div class="oculto">
                         <h3>Base Legal</h3>
                         <p>Constitución Política de los Estados Unidos Mexicanos, Título 1°. Capítulo I, Artículo 5°.</p>
 
@@ -92,7 +92,7 @@ Información
                     <button id="btnlm3" type="button" class="btn btn-default btn-lg btn-block">Base Legal</button>
                 </article>
                 <article id="art4">
-                    <div id="oculto">
+                    <div class="oculto">
                         <h3>¿Cuáles son los requisitos?</h3>
                         <p>El alumno deberá contar con el 70% de los créditos aprobados de su plan de estudios.</p>
 
@@ -114,7 +114,7 @@ Información
                     <button id="btnlm4" type="button" class="btn btn-default btn-lg btn-block">¿Cuáles son los requisitos?</button>
                 </article>
                 <article id="art5">
-                    <div id="oculto">
+                    <div class="oculto">
                         <h3>¿Cuál es el procedimiento?</h3>
                         <p>Los alumnos interesados que cumplan con los requisitos anteriores, deberán dirigirse a la oficina de Servicio Social, en el Departamento de Gestión Tecnológica y Vinculación.</p>
 
@@ -129,12 +129,12 @@ Información
                         <p>Durante el desarrollo de servicio social el alumno elaborará Reportes Bimestrales de las actividades que realiza, los cuales deberán ser entregados en la oficina de servicio social en el tiempo estipulado (original y copia).</p>
 
                         <p>La oficina de servicio social recibe los reportes y firma la copia de recibido como evidencia de entregado por el alumno. Al concluir el periodo, el alumno deberá presentar Constancia de Terminación de Servicio Social y Memoria Final.</p>
-                        
+
                     </div>
                     <button id="btnlm5" type="button" class="btn btn-default btn-lg btn-block">¿Cuál es el procedimiento?</button>
                 </article>
                 <article id="art6">
-                    <div id="oculto">
+                    <div class="oculto">
                         <h3>¿Qué es lo que debe contener mi memoria final?</h3>
                         <p>Hoja de presentación</p>
 
@@ -163,7 +163,7 @@ Información
                         <p>*No debe haber memorias iguales.</p>
 
                         <p>*Tipo de letra ARIAL número 12.</p>
-                        
+
                     </div>
                     <button id="btnlm6" type="button" class="btn btn-default btn-lg btn-block">¿Qué es lo que debe contener mi memoria final?</button>
                 </article>
@@ -172,7 +172,7 @@ Información
 
         <div id="formatos">
             <section id="seccionlinks">
-                <article id="planviejo"> 
+                <article id="planviejo">
                     <h3 id="docspv">Formatos para descarga 2004-2005 (Plan Viejo)</h3>
                     <p><a href="http://itculiacan.edu.mx/wp-content/uploads/2014/09/1-FORMATO-DE-SOLICITUD-DE-SS-OK.doc">1. Formato de solicitud de la Dependencia/Institución</a></p>
                     <p><a href="http://itculiacan.edu.mx/wp-content/uploads/2013/09/2-Solicitud-para-realizar-el-SS.doc">2. Solicitud para realizar el Servicio Social</a></p>
@@ -197,7 +197,7 @@ Información
                     <p><a href="http://itculiacan.edu.mx/wp-content/uploads/2014/11/ITC-VI-PO-004-04-Formato-para-evaluación-bimestral-de-servicio-social-rev-211.docx">8. Formato Evaluación Bimestral</a></p>
                     <p><strong>NOTA: Se les informa que el formato &#8220;9. Carta de Terminación&#8221; tuvo actualizaciones, favor de hacer los cambios correspondientes para poder darle seguimiento a las liberaciones.</strong></p>
                     <p><a href="http://itculiacan.edu.mx/wp-content/uploads/2015/01/9-FORMATO-DE-CARTA-DE-TERMINACION-SS-OK.doc">9. Formato de Carta de Terminación</a></p>
-                    <p><a href="http://itculiacan.edu.mx/wp-content/uploads/2014/01/10-Puntos-para-Memoria-Final.doc">10. Puntos para Memoria Final</a></p>         
+                    <p><a href="http://itculiacan.edu.mx/wp-content/uploads/2014/01/10-Puntos-para-Memoria-Final.doc">10. Puntos para Memoria Final</a></p>
                 </article>
             </section>
         </div>

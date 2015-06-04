@@ -10,19 +10,13 @@ html {
     height: 100%;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .lead {
@@ -38,14 +32,20 @@ h6 {
     background: url(../img/intro-bg.jpg) no-repeat center center;
     background-size: cover;
 }
+.login-header {
+    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 100px;
+    color: inherit;
+}
+
 
 .intro-message {
     position: relative;
     padding-top: 20%;
     padding-bottom: 20%;
 }
-
-.intro-message > h1 {
+/* qualified heading */
+.intro-message h1 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
@@ -54,6 +54,7 @@ h6 {
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid #000000;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
@@ -165,7 +166,7 @@ footer {
     background-color: #f8f8f8;
 }
 
-p.copyright {
+p .copyright {
     margin: 15px 0 0;
 }
 
@@ -182,7 +183,7 @@ p.copyright {
     text-align: center;
 }
 
-#oculto{
+.oculto{
     display: none;
 }
 
@@ -190,13 +191,6 @@ p.copyright {
    float: none;
    margin-right: auto;
    margin-left: auto;
-}
-
-.img-header {
-    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 100px;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
-    background-size: cover;
 }
 
 .btn-file {
@@ -209,11 +203,11 @@ p.copyright {
     right: 0;
 /*    min-width: 100%;
     min-height: 100%;
-    font-size: 100px;*/
+    font-size: 100px;
+    outline: none;*/
     text-align: right;
     filter: alpha(opacity=0);
     opacity: 0;
-    outline: none;
     background: white;
     cursor: inherit;
     display: block;

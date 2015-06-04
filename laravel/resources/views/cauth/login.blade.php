@@ -3,7 +3,7 @@
 Servicio Social - Login
 @stop
 @section('content')
-<div class="img-header">
+<div class="intro-header login-header">
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 col-centered">
@@ -23,7 +23,7 @@ Servicio Social - Login
 					@endif
 
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/cauth/login') }}">
-						
+
 					    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">

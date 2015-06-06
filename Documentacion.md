@@ -91,5 +91,3 @@ Descripción.-Es la empresa en la cual se emplea esta aplicación.
 Roles.-Es la empresa en la cual se va usar la aplicación.
 ```
 
-### Casos de uso
-
